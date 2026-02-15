@@ -11,14 +11,26 @@
         }
         .logo{
             font-size: 24px;
+            color: white;
         }
-        .nav-links{
-            list-style: none; 
-            display: flex; 
-            flex-direction: row; 
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
             justify-content: space-around;
+        }
+        .nav-links li a{
             color: white; 
             text-decoration: none;
+        }
+        .nav-links a:hover{
+            background-color: gold;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -26,7 +38,7 @@
 <body>
     <header>
         <nav class="flex-container">
-            <div class="logo">MySite</div>
+            <div class="logo">My Site</div>
             <ul class="nav-links">
                 <li><a href="myflex.html">Flex</a></li>
                 <li><a href="layout.html">Layout</a></li>

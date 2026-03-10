@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Path of Stealth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>The Path of Stealth</h1>
+        <p>To successfully navigate the Path of Stealth, you must choose your actions carefully. Select the correct sequence of actions to avoid detection and reach your objective.</p>
+        <div onclick="selectAction('hide', this)" class="stealth-option">Hide in the shadows</div>
+        <div onclick="selectAction('run', this)" class="stealth-option">Run quickly to the next cover</div>
+        <div onclick="selectAction('distract', this)" class="stealth-option">Create a distraction</div>
+        <div onclick="selectAction('wait', this)" class="stealth-option">Wait for the right moment</div>
+        <button onclick="checkSequence()">Check Sequence</button>
+        <button onclick="reset()">Reset!</button>
+        <script>
+            const correctSequence = ['hide', 'wait', 'distract'];
+            let userSequence = [];
+
+            function selectAction(action, element) {
+                userSequence.push(action);
+                element.classList.add('selected');
+                console.log("Current sequence:", userSequence);
+            }
+
+            function checkSequence() {
+                if (JSON.stringify(userSequence) === JSON.stringify(correctSequence)) {
+                    alert("Congratulations! You've mastered the Path of Stealth.");
+                    window.location.href = 'page6.html';
+                } else {
+                    alert("Incorrect sequence. The guards spotted you! Try again.");
+                    reset();
+                }
+            }
+
+            function reset() {
+                userSequence = [];
+                document.querySelectorAll('.stealth-option').forEach(el => {
+                    el.classList.remove('selected');
+                });
+            }
+        </script>
+    </section>
+</body>
+</html>

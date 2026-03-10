@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Continues</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+       <h1>The Journey Continues</h1>
+        <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
+
+        <form id="pathForm" action="page6.html" method="GET">
+            <label for="pathChoice">Choose your path:</label>
+            <select id="pathChoice" name="pathChoice" required>
+                <option value="" disabled selected>--Please choose an option--</option>
+                <option value="strength">The Path of Strength</option>
+                <option value="wisdom">The Path of Wisdom</option>
+                <option value="stealth">The Path of Stealth</option>
+            </select>
+            <br>
+            <button type="submit">Continue on Your Journey</button>
+        </form>
+
+        <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+
+    </section>
+
+    <script>
+        const pathSelect = document.getElementById('pathChoice');
+        const form = document.getElementById('pathForm');
+        const body = document.body;
+
+        pathSelect.addEventListener('change', function() {
+
+            if (this.value === 'strength') {
+                body.style.backgroundColor = 'rgb(255, 50, 50)';
+            } else if (this.value === 'wisdom') {
+                body.style.backgroundColor = 'rgb(200, 20, 238)';
+            } else if (this.value === 'stealth') {
+                body.style.backgroundColor = 'rgb(100, 100, 100)';
+            }
+
+            if (this.value === 'stealth') {
+                form.action = 'page5b.html';
+            } else {
+                form.action = 'page6.html';
+            }
+        });
+    </script>
+</body>
+</html>

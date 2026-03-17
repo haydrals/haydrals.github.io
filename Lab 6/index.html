@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="email">Siena College Email: </label>
+        <input type="@siena.edu" id="email" name="email" pattern=".+@siena\.edu" title="Please enter your SIENA email" placeholder="Enter your Siena email" required>
+
+        <label for="userId">Siena ID:</label>
+        <input type="text" id="userId" name="userId" placeholder="Enter your Siena ID" pattern="902.*" title="ID must start with 902" maxlength="8" minlength="8" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

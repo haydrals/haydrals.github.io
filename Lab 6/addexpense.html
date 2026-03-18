@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+</head>
+
+<body>
+    <h2>Add Expense</h2>
+
+    <form id="expenseForm">
+
+        <label>Place of Expense:</label>
+        <input type="text" id="place" required minlength="5"><br>
+        <span class="error" id="placeError"></span><br>
+
+        <label>Expense Date:</label>
+        <input type="date" id="date" required><br>
+        <span class="error" id="dateError"></span><br>
+
+        <label>Expense Amount:</label>
+        <input type="number" id="amount" step="0.01" required><br>
+        <span class="error" id="amountError"></span><br>
+
+        <label>Expense Category:</label><br>
+        <input type="checkbox" name="category" value="Groceries"> Groceries<br>
+        <input type="checkbox" name="category" value="Business"> Business<br>
+        <input type="checkbox" name="category" value="Restaurant"> Restaurant<br>
+        <input type="checkbox" name="category" value="Fun"> Fun<br>
+        <span class="error" id="categoryError"></span><br>
+
+        <label>Mode of Payment:</label>
+        <select id="payment" required>
+            <option value="">--Select--</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Cash">Cash</option>
+        </select><br>
+        <span class="error" id="paymentError"></span><br>
+
+        <label>Rationale:</label>
+        <textarea id="rationale" maxlength="100"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

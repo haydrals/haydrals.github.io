@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Source</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Add Income</h1>
+
+    <form action="#" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Income Name Source: </label>
+            <input type="text" class="form-control" id="name" name="name" minlength="3"
+                title="Source name length minimum of 3" required><br>
+        </div>
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount:</label>
+            <input type="number" id="amount" class="form-control" name="amount" min=".01" step=".01" required><br>
+        </div>
+        <div class="mb-3">
+            <label for="frequency" class="form-label">Frequency: </label>
+            <select id="frequency" name="frequency" class="form-select" title="Frequency: ">
+                <option value="1">Once</option>
+                <option value="12">Monthly</option>
+                <option value="104">Bi-Weekly</option>
+                <option value="1">Yearly</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

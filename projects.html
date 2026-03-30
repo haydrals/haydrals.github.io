@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me Page</title>
+    <title>Projects</title>
     <style>
-        /* Reset and base styles */
+        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
@@ -51,29 +51,29 @@
             color: #222;
         }
 
-        h2 {
+        h2 a {
             color: #4CAF50;
-            margin-bottom: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        h2 a:hover {
+            text-decoration: underline;
+        }
+
+        /* Image styling */
+        section img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        section {
             text-align: center;
-        }
-
-        /* Paragraphs */
-        p {
-            max-width: 600px;
-            margin: 10px auto 30px auto;
-            text-align: center;
-        }
-
-        /* Lists */
-        ul {
-            max-width: 400px;
-            margin: 0 auto 40px auto;
-            list-style-type: square;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
+            margin-bottom: 40px;
         }
 
         /* Footer styling */
@@ -84,6 +84,39 @@
             padding: 10px 0;
             border-top: 1px solid #ddd;
         }
+        /* Additional box styling */
+        .box-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .box {
+            background-color: #f4f4f4;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .box a:hover {
+            color: #ff9800;
+        }
     </style>
 </head>
 <body>
@@ -93,21 +126,18 @@
         <a href="projects.html" class="active">Projects</a>
     </nav>
 
+    <h1>Projects</h1>
+    <p>Click on a box to go to that project:</p>
 
-    <h1>About Me</h1>
-    <p>My name is Hayden Ralston, and I am learning web development while studying to become a software engineer.</p>
-
-    <section>
-        <h2>My Interests</h2>
-        <ul>
-            <li>Web Design</li>
-            <li>Software Engineering</li>
-            <li>Fishing</li>
-        </ul>
-    </section>
+    <div class="box-container">
+        <div class="box">
+            <a href="project2/welcome.html">Project 2</a>
+        </div>
+        
+    </div>
 
     <footer>
-        <p>Thanks for visiting my About Me page!</p>
+        <p>All project files are listed above.</p>
     </footer>
 </body>
 </html>

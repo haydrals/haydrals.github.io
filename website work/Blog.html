@@ -2,64 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
     <style>
-        body {
+        /* Reset and base styles */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        header, footer {
-            background-color: #222;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Navigation bar styling */
+        nav.top-nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
             color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ffeb3b;
+            text-decoration: underline;
+        }
+
+        h1, h2 {
             text-align: center;
-            padding: 15px;
+            margin-bottom: 20px;
         }
 
-        .holy-grail {
-            display: grid;
-            grid-template-columns: 200px 1fr 200px;
-            grid-template-rows: auto 1fr auto;
-            min-height: 100vh;
+        h2 {
+            color: #4CAF50;
         }
 
-        nav {
-            background-color: #f4f4f4;
-            padding: 15px;
+        /* Paragraphs */
+        p {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            text-align: center;
         }
 
-        main {
-            background-color: #ffffff;
-            padding: 15px;
-        }
-
-        aside {
-            background-color: #eaeaea;
-            padding: 15px;
-        }
-
+        /* Footer styling */
         footer {
-            grid-column: 1 / 4;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
         }
 
-        header {
-            grid-column: 1 / 4;
+        /* Optional: Holy Grail layout note */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <nav class="top-nav">
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="About me.html">About Me</a></li>
-        <li><a href="Blog.html">Blog</a></li>
-        <li><a href="4th.html">4th Page</a></li>
-    </ul>
+        <a href="index.html" class="active">Home</a>
+        <a href="Lab Work.html" class="active">Lab Work</a>
+        <a href="projects.html" class="active">Projects</a>
     </nav>
-    <h2>My Blog Page</h2>
-    <p>with the holy grail layout</p>
 
-    
+    <h1>Welcome to My Blog</h1>
+    <section>
+        <h2>Holy Grail Layout</h2>
+        <p>This page uses a simple layout idea inspired by the "Holy Grail" layout. Content sections can be expanded here for posts or other blog material.</p>
+    </section>
+
+    <footer>
+        <p>Thanks for visiting my Blog page!</p>
+    </footer>
 </body>
 </html>

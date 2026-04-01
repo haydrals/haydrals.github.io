@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        img {
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The API Diner</h1>
+    <button id="fetch-btn">Order a Random Dog</button>
+    <div id="output"></div>
+
+    <h2>Search the Menu</h2>
+    <input id="food-input" type="text" placeholder="Search for a food...">
+    <button id="meal-btn">Search Menu</button>
+    <div id="meal-output"></div>
+
+    <h2>😂 Tell Me a Joke</h2>
+        <button onclick="fetchJoke()">Get Joke</button>
+
+        <div id="output">
+            <p id="setup"></p>
+            <p id="punchline"></p>
+        </div>
+
+        <button id="revealBtn" onclick="revealPunchline()" style="display:none;">
+            Show Punchline
+        </button>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
